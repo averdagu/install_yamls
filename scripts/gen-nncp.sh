@@ -131,7 +131,7 @@ EOF_CAT
         - ${DNS_SERVER_IPV6}
 EOF_CAT
     fi
-    if [ -n "$NNCP_ADDITIONAL_HOST_ROUTES" ]; then
+    if [ -n "$ADDITIONAL_HOST_ROUTES" ]; then
     #
     # Host Routes
     #
@@ -139,7 +139,7 @@ EOF_CAT
     routes:
       config:
 EOF_CAT
-        for route in $NNCP_ADDITIONAL_HOST_ROUTES; do
+        for route in $ADDITIONAL_HOST_ROUTES; do
             cat >> ${DEPLOY_DIR}/${WORKER}_nncp.yaml <<EOF_CAT
       - destination: ${route}
         next-hop-interface: ${BRIDGE_NAME}

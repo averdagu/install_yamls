@@ -2214,6 +2214,7 @@ endif
 .PHONY: nncp
 nncp: export INTERFACE=${NNCP_INTERFACE}
 nncp: export BRIDGE_NAME=${NNCP_BRIDGE}
+nncp: export ADDITIONAL_HOST_ROUTES=${NNCP_ADDITIONAL_HOST_ROUTES}
 ifeq ($(NETWORK_BGP), true)
 nncp: export BGP=enabled
 nncp: export INTERFACE_BGP_1=${NNCP_BGP_1_INTERFACE}
